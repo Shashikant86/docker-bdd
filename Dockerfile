@@ -13,7 +13,7 @@ RUN apt-get install -y unzip
 RUN apt-get install -y android-tools-adb
 RUN apt-get install -y openjdk-7-jre-headless lib32z1 lib32ncurses5 g++-multilib
 RUN apt-get install -y vim
-RUN apt-get install -y npm 
+RUN apt-get install -y npm
 
 ENV PHANTOMJS_VERSION 1.9.7
 
