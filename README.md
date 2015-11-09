@@ -23,12 +23,26 @@ Pull the docker image from DockerHub
 
 Now wait for all provisioning done for you.
 
+
+
+
 Once image is succesfully downloaded.
 
-              $ docker run -t -i docker-bdd /bin/bash
+# Inside the Container 
+You can run 
+
+              $ docker run -t -i shashikant86/docker-bdd /bin/bash
 
 Now you are inside the docker container and in '/opt/bdd/cucumber' directory.
 
 Now you can run all BDDfire[https://github.com/Shashikant86/bddfire] rake tasks. Now we will use Poltergeist
 
+               $ bundle install 
                $ bundle exec rake poltergeist
+               
+               
+## Outside the container 
+
+              $ docker start {Container_id}
+              $ docker exec {Container_id} bundle install
+              $ docker exec {Container_id} bundle exec rake poltergeist
